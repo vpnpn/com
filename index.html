@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="冲上云霄机场,冲上云霄官网,冲上云霄"/>
+    <meta name="description" content="冲上云霄机场,冲上云霄官网,冲上云霄,冲上云霄高速机场,冲上云霄便宜机场,冲上云霄机场优惠券">
+    <meta name="author" content="冲上云霄">
+    <meta name="Copyright" content="冲上云霄版权所有">
+    <meta property="og:title" content="冲上云霄机场,冲上云霄官网,冲上云霄" />
+    <meta property="og:description" content="冲上云霄机场,冲上云霄官网,冲上云霄">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.vpnpn.com" />
+    <meta property="og:site_name" content="冲上云霄">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>冲上云霄网络加速 - VPNPN</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "微软雅黑";
+            font-size: 16px;
+            line-height: 1.8;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a{
+            text-decoration:none;
+            color:#333;
+        }
+        .nav{
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+        }
+        .nav .logo{
+            width: 760px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+        }
+        .logo img{
+            height: 100%;
+        }
+        .logo p{
+            line-height: 100px;
+            font-size: 45px;
+            font-weight: bold;
+            background-image: linear-gradient(to right, #ad2cee, #2656f3);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .warp{
+            padding-bottom: 100px;
+            margin-top: 100px;
+            width: 1024px;
+        }
+        .warp .gw-box{
+            border-radius: 20px;
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        .warp .gw-box h3{
+            display: flex;
+            justify-content: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 24px;
+            color: rgba(55, 84, 234, 0.80);
+        }
+        .warp .guanwang{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .warp .guanwang h2{
+            height: 70px;
+            line-height: 70px;
+            flex: 1;
+            margin: 0 15px 15px 15px;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+            background: rgba(55, 84, 234, 0.75);
+            min-width: 150px;
+            flex-basis: calc(50% - 30px);
+            text-align: center;
+        }
+        .warp .guanwang h2 a{
+            color: #ffffff;
+            font-size: 24px;
+        }
+        .warp .wangzhan{
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .warp .gw-box .h3-wangzhan{
+            color: rgba(106, 69, 231, 0.8);
+        }
+        .wangzhan .login {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            border-radius: 20px;
+            background: rgba(106, 69, 231, 0.1);
+        }
+        .wangzhan .login i{
+            margin-top: 5px;
+            height: 40px;
+        }
+        .wangzhan .login img{
+            width: 40px;
+        }
+        .wangzhan .login p {
+            font-size: 24px;
+            color: rgb(245, 132, 12);
+        }
+        .wangzhan .login p span {
+            font-size: 16px;
+        }
+        .wangzhan .login span{
+            font-size: 16px;
+            color: rgb(245, 132, 12);
+        }
+        .wangzhan .login div{
+            height: 40px;
+            width: 130px;
+            line-height: 40px;
+            margin: 10px 0 15px 0;
+            color: #6d327c;
+            text-align: center;
+            border-radius: 20px;
+            background: rgba(106, 69, 231, 0.7);
+        }
+        .wangzhan .login a {
+            color: #ffffff;
+            font-size: 16px;
+        }
+        .warp .gw-box .h3-tg{
+            color: rgba(158, 38, 241, 0.7);
+        }
+        .warp .gw-box .tg{
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .warp .gw-box .tg h2{
+            height: 70px;
+            line-height: 70px;
+            flex: 1;
+            margin: 0 15px 0 15px;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+            background: rgba(158, 38, 241, 0.8);
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .warp .tg h2 a{
+            color: #ffffff;
+            font-size: 24px;
+        }
+        .warp .tg h2 i{
+            padding-top: 8px;
+            padding-right: 5px;
+        }
+        .warp .gw-box .h3-app{
+            color: rgba(183, 81, 253, 0.7);
+        }
+        .warp .gw-box .app{
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .warp .gw-box .app h2{
+            height: 70px;
+            line-height: 70px;
+            margin: 0 15px 0 15px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+            background: rgba(183, 81, 253, 0.7);
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background-image: linear-gradient(to right, rgba(255, 7, 244, 0.62), #d440ff, rgba(164, 85, 255, 0.69), rgba(109, 97, 255, 0.69), #0768fa);
+        }
+        .warp .app h2 i{
+            position: relative;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+        .warp .app h2 a{
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .bg{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            background: linear-gradient(135deg, rgba(221, 240, 250, 0.7) 50%, rgba(208, 222, 167, 0.7));
+        }
+        .y1{
+            position: fixed;
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            top: 20%;
+            left: 20%;
+            background: linear-gradient(135deg, #ffb566, #ff6677);
+            z-index: -2;
+            animation: y1 10s infinite alternate;
+        }
+        @keyframes y1{
+            0% {
+                top: 70%;
+                left: 20%;
+            }
+            100% {
+                top: 5%;
+                left: 15%;
+            }
+        }
+        .y2{
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            top: 45%;
+            left: 70%;
+            background: linear-gradient(135deg, #de82ca, #259fac);
+            z-index: -2;
+            animation: y2 8s infinite alternate;
+        }
+        @keyframes y2{
+            0% {
+                top: 5%;
+                left: 70%;
+            }
+            100% {
+                top: 80%;
+                left: 40%;
+            }
+        }
+        @media screen and (max-width: 1024px){
+            .warp{
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 767px){
+            .warp {
+                margin-top: 70px;
+            }
+            .nav {
+                height: 70px;
+            }
+            .nav .logo {
+                width: 100%;
+                height: 70px;
+            }
+            .logo p {
+                font-size: 25px;
+                line-height: 70px;
+            }
+            .gw-box h3 {
+                font-size: 18px;
+                line-height: 18px;
+                height: 18px;
+            }
+            .gw-box {
+                margin-top: 20px;
+            }
+            .guanwang {
+                margin-top: 16px;
+            }
+            .guanwang h2 {
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+            }
+            .y1{
+                top: 17%;
+                left: 4%;
+                background-image: linear-gradient(135deg, rgba(255, 181, 102, 0.7), rgba(255, 102, 119, 0.6));
+            }
+            .y2{
+                top: 45%;
+                left: 52%;
+                background-image: linear-gradient(148deg, rgba(222, 130, 202, 0.67), rgba(37, 159, 172, 0.64));
+            }
+        }
+        @media screen and (max-width: 600px){
+            .guanwang h2 {
+                flex: 1 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        <p>冲上云霄</p>
+    </div>
+</div>
+
+<div class="warp">
+    <div class="gw-box">
+        <h3>谨防失联，牢记域名</h3>
+        <div class="guanwang" style="color:white;">
+            <h2>vpnpn.com</h2>
+            <h2>csyx.xyz</h2>
+            <h2>翻墙.xyz</h2>
+            <h2>潘金莲.xyz</h2>
+            <h2>冲上云霄.com</h2>
+        </div>
+    </div>
+
+    <div class="gw-box">
+        <h3 class="h3-wangzhan">冲上云霄面板</h3>
+        <a href="https://www.999000.best/">
+            <div class="guanwang" style="color: #d5ff00;">
+                <h2>www.999000.best</h2>
+            </div>
+        </a>
+        <a href="https://my.vpnpn.com/">
+            <div class="guanwang" style="color: #d5ff00;">
+                <h2>my.vpnpn.com</h2>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="bg"></div>
+<div class="y1"></div>
+<div class="y2"></div>
+</body>
+</html>
