@@ -4,6 +4,6 @@
 
 每日签到免费领流量
 
-1元50G 10元800G
+三网BGP专线 新疆可用
 
 https://www.vpnpn.com
