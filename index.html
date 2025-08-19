@@ -13,7 +13,7 @@
     <meta property="og:site_name" content="冲上云霄">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>冲上云霄网络加速 - VPNPN</title>
-    <style>
+  <style>
         * {
             padding: 0;
             margin: 0;
@@ -84,8 +84,8 @@
         }
         .warp .guanwang{
             display: flex;
-            flex-wrap: wrap;
             margin-top: 20px;
+            /*width: 300px;*/
             justify-content: space-around;
             align-items: center;
         }
@@ -93,14 +93,12 @@
             height: 70px;
             line-height: 70px;
             flex: 1;
-            margin: 0 15px 15px 15px;
+            margin: 0 15px 0 15px;
             display: flex;
             justify-content: center;
             border-radius: 20px;
             background: rgba(55, 84, 234, 0.75);
-            min-width: 150px;
-            flex-basis: calc(50% - 30px);
-            text-align: center;
+
         }
         .warp .guanwang h2 a{
             color: #ffffff;
@@ -109,14 +107,17 @@
         .warp .wangzhan{
             display: flex;
             margin-top: 20px;
-            justify-content: space-around;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
         }
         .warp .gw-box .h3-wangzhan{
             color: rgba(106, 69, 231, 0.8);
         }
         .wangzhan .login {
-            width: 30%;
+            width: 220px;
+            min-height: 160px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -124,6 +125,15 @@
             font-weight: bold;
             border-radius: 20px;
             background: rgba(106, 69, 231, 0.1);
+            padding: 15px 12px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(106, 69, 231, 0.2);
+        }
+        .wangzhan .login:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(106, 69, 231, 0.3);
+            background: rgba(106, 69, 231, 0.15);
         }
         .wangzhan .login i{
             margin-top: 5px;
@@ -135,27 +145,58 @@
         .wangzhan .login p {
             font-size: 24px;
             color: rgb(245, 132, 12);
+            margin: 10px 0;
+            text-align: center;
+            min-height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .wangzhan .login p span {
             font-size: 16px;
+            margin-left: 5px;
         }
         .wangzhan .login span{
             font-size: 16px;
             color: rgb(245, 132, 12);
+            margin: 8px 0;
+            text-align: center;
+            font-weight: 600;
         }
         .wangzhan .login div{
             height: 40px;
             width: 130px;
             line-height: 40px;
-            margin: 10px 0 15px 0;
+            margin: 15px 0 10px 0;
             color: #6d327c;
             text-align: center;
             border-radius: 20px;
             background: rgba(106, 69, 231, 0.7);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .wangzhan .login div:hover {
+            background: rgba(106, 69, 231, 0.9);
+            transform: scale(1.05);
         }
         .wangzhan .login a {
             color: #ffffff;
             font-size: 16px;
+        }
+        
+        /* 测速状态样式 */
+        .wangzhan .login p.fast {
+            color: #4CAF50 !important;
+        }
+        .wangzhan .login p.medium {
+            color: #FF9800 !important;
+        }
+        .wangzhan .login p.slow {
+            color: #F44336 !important;
+        }
+        .wangzhan .login p.timeout,
+        .wangzhan .login p.error {
+            color: #9E9E9E !important;
         }
         .warp .gw-box .h3-tg{
             color: rgba(158, 38, 241, 0.7);
@@ -163,6 +204,7 @@
         .warp .gw-box .tg{
             display: flex;
             margin-top: 20px;
+            /*width: 300px;*/
             justify-content: space-around;
             align-items: center;
         }
@@ -193,6 +235,7 @@
         .warp .gw-box .app{
             display: flex;
             margin-top: 20px;
+            /*width: 300px;*/
             justify-content: space-around;
             align-items: center;
         }
@@ -237,14 +280,15 @@
             left: 20%;
             background: linear-gradient(135deg, #ffb566, #ff6677);
             z-index: -2;
-            animation: y1 10s infinite alternate;
+            animation: y1 10s infinite;
+            animation-direction: alternate;
         }
-        @keyframes y1{
-            0% {
+        @keyframes y1 {
+            0%{
                 top: 70%;
                 left: 20%;
             }
-            100% {
+            100%{
                 top: 5%;
                 left: 15%;
             }
@@ -258,137 +302,393 @@
             left: 70%;
             background: linear-gradient(135deg, #de82ca, #259fac);
             z-index: -2;
-            animation: y2 8s infinite alternate;
+            animation: y2 8s infinite;
+            animation-direction: alternate;
         }
-        @keyframes y2{
-            0% {
+        @keyframes y2 {
+            0%{
                 top: 5%;
                 left: 70%;
             }
-            100% {
+            100%{
+
                 top: 80%;
                 left: 40%;
             }
         }
-        @media screen and (max-width: 1024px){
+        @media screen and (max-width:767px) {
             .warp{
-                width: 80%;
-            }
-        }
-        @media screen and (max-width: 767px){
-            .warp {
+                width: 95%;
                 margin-top: 70px;
             }
             .nav {
-                height: 70px;
-            }
-            .nav .logo {
-                width: 100%;
                 height: 70px;
             }
             .logo p {
                 font-size: 25px;
                 line-height: 70px;
             }
-            .gw-box h3 {
-                font-size: 18px;
-                line-height: 18px;
-                height: 18px;
+            .nav .logo {
+                height: 70px;
             }
-            .gw-box {
-                margin-top: 20px;
+            .warp .gw-box h3 {
+                font-size: 16px;
+                line-height: 20px;
+                height: auto;
+                margin: 8px 0;
+                text-align: center;
             }
-            .guanwang {
-                margin-top: 16px;
+            .warp .gw-box {
+                margin-top: 15px;
+                padding: 15px 0;
             }
-            .guanwang h2 {
-                height: 50px;
-                line-height: 50px;
+            .warp .guanwang {
+                margin-top: 12px;
+            }
+            .warp .guanwang h2{
+                height: 45px;
+                line-height: 45px;
+                margin: 0 10px;
+            }
+            .warp .guanwang h2 a{
                 font-size: 16px;
             }
-            .y1{
+            .warp .wangzhan {
+                margin-top: 12px;
+                gap: 15px;
+            }
+            .wangzhan .login {
+                width: calc(50% - 15px);
+                min-height: 120px;
+                padding: 10px 8px;
+                margin: 0;
+            }
+            .wangzhan .login i {
+                height: 25px;
+                margin-top: 3px;
+            }
+            .wangzhan .login img {
+                height: 25px;
+                width: 25px;
+            }
+            .wangzhan .login p {
+                font-size: 16px;
+                min-height: 20px;
+                margin: 6px 0;
+            }
+            .wangzhan .login p span {
+                font-size: 11px;
+            }
+            .wangzhan .login span {
+                font-size: 12px;
+                margin: 4px 0;
+            }
+            .wangzhan .login div {
+                width: 80px;
+                height: 30px;
+                line-height: 30px;
+                margin: 8px 0 6px 0;
+            }
+            .wangzhan .login a {
+                font-size: 12px;
+            }
+            .warp .gw-box .tg {
+                margin-top: 12px;
+            }
+            .warp .gw-box .tg h2 {
+                height: 45px;
+                line-height: 45px;
+                margin: 0 10px;
+            }
+            .warp .tg h2 a {
+                font-size: 14px;
+            }
+            .warp .tg h2 svg {
+                width: 20px;
+            }
+            .warp .gw-box .app {
+                margin-top: 12px;
+                flex-direction: column;
+                align-items: center;
+            }
+            .warp .gw-box .app h2 {
+                height: 45px;
+                line-height: 45px;
+                width: 95%;
+                margin: 0 0 12px 0;
+                background-image: linear-gradient(to right, #ff07f4, #d440ff, #a455ff, #6d61ff, #0768fa);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+            }
+            .warp .app h2 a {
+                font-size: 16px;
+                line-height: 45px;
+            }
+            .warp .app h2 i{
+                position: relative;
+                margin-top: 5px;
+                margin-right: 5px;
+            }
+            .warp {
+                padding-bottom: 30px;
+            }
+            .y1 {
                 top: 17%;
                 left: 4%;
                 background-image: linear-gradient(135deg, rgba(255, 181, 102, 0.7), rgba(255, 102, 119, 0.6));
             }
-            .y2{
+            .y2 {
                 top: 45%;
                 left: 52%;
                 background-image: linear-gradient(148deg, rgba(222, 130, 202, 0.67), rgba(37, 159, 172, 0.64));
             }
         }
-        @media screen and (max-width: 600px){
-            .guanwang h2 {
-                flex: 1 0 100%;
+        
+        /* 超小屏幕优化 */
+        @media screen and (max-width: 480px) {
+            .warp {
+                width: 98%;
+                margin-top: 60px;
+            }
+            .nav {
+                height: 60px;
+            }
+            .logo p {
+                font-size: 22px;
+                line-height: 60px;
+            }
+            .nav .logo {
+                height: 60px;
+            }
+            .warp .gw-box h3 {
+                font-size: 14px;
+                line-height: 18px;
+                margin: 6px 0;
+            }
+            .warp .gw-box {
+                margin-top: 10px;
+                padding: 12px 0;
+            }
+            .wangzhan .login {
+                width: 100%;
+                min-height: 110px;
+                padding: 8px 6px;
+                margin-bottom: 10px;
+            }
+            .wangzhan .login i {
+                height: 22px;
+            }
+            .wangzhan .login img {
+                height: 22px;
+                width: 22px;
+            }
+            .wangzhan .login p {
+                font-size: 15px;
+                min-height: 18px;
+            }
+            .wangzhan .login span {
+                font-size: 11px;
+            }
+            .wangzhan .login div {
+                width: 70px;
+                height: 28px;
+                line-height: 28px;
+                font-size: 12px;
+            }
+            .warp .guanwang h2,
+            .warp .gw-box .tg h2,
+            .warp .gw-box .app h2 {
+                height: 40px;
+                line-height: 40px;
+                margin: 0 8px;
+            }
+            .warp .guanwang h2 a,
+            .warp .tg h2 a,
+            .warp .app h2 a {
+                font-size: 14px;
             }
         }
-    </style>
-</head>
-<body>
-<div class="nav">
-    <div class="logo">
-        <p>冲上云霄</p>
+    </style> 
+ </head> 
+ <body> 
+  <div class="nav"> 
+   <div class="logo"> 
+    <br>
+    <p>冲上云霄</p> 
+   </div> 
+  </div> 
+  <div class="warp"> 
+   <div class="gw-box"> 
+    <h3> 谨防失联，牢记域名</h3> 
+    <h3>由于不可避免的因素会导致官网域名被污染</h3> 
+    <h3>请一定要收藏地址发布页</h3> 
+    <h3>Ctrl+D添加到收藏夹</h3> 
+    <div class="guanwang"> 
+     <h2><a href="https://冲上云霄.com">冲上云霄.com</a></h2> 
+    </div> 
+   </div> 
+   <div class="gw-box"> 
+    <h3 class="h3-wangzhan">冲上云霄面板</h3> 
+    <div class="wangzhan"> 
+    </div> 
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="refreshSpeedTest()" style="
+            background: rgba(106, 69, 231, 0.7);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='rgba(106, 69, 231, 0.9)'" onmouseout="this.style.background='rgba(106, 69, 231, 0.7)'">
+            重新测速
+        </button>
+    </div>
+   </div> 
+   <div class="gw-box"> 
+    <h3 class="h3-tg">冲上云霄官方TG群</h3> 
+    <div class="tg"> 
+     <h2> <i>
+       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewbox="0,0,256,256"> 
+        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+         <g transform="scale(5.12,5.12)">
+          <path d="M25,2c12.703,0 23,10.297 23,23c0,12.703 -10.297,23 -23,23c-12.703,0 -23,-10.297 -23,-23c0,-12.703 10.297,-23 23,-23zM32.934,34.375c0.423,-1.298 2.405,-14.234 2.65,-16.783c0.074,-0.772 -0.17,-1.285 -0.648,-1.514c-0.578,-0.278 -1.434,-0.139 -2.427,0.219c-1.362,0.491 -18.774,7.884 -19.78,8.312c-0.954,0.405 -1.856,0.847 -1.856,1.487c0,0.45 0.267,0.703 1.003,0.966c0.766,0.273 2.695,0.858 3.834,1.172c1.097,0.303 2.346,0.04 3.046,-0.395c0.742,-0.461 9.305,-6.191 9.92,-6.693c0.614,-0.502 1.104,0.141 0.602,0.644c-0.502,0.502 -6.38,6.207 -7.155,6.997c-0.941,0.959 -0.273,1.953 0.358,2.351c0.721,0.454 5.906,3.932 6.687,4.49c0.781,0.558 1.573,0.811 2.298,0.811c0.725,0 1.107,-0.955 1.468,-2.064z"></path>
+         </g>
+        </g> 
+       </svg></i> <a href="https://t.me/vpnpn123" target="_blank">冲上云霄官方TG群</a></h2> 
+         </g>
+    </div> 
+   </div> 
+   <div class="gw-box">
+    <h3>谨防失联，牢记域名</h3>
+    <div class="guanwang" style="color:white;">
+        <h2 style="color:#ff9191">vpnpn.com</h2>
+        <h2>csyx.xyz</h2>
+        <h2>翻墙.xyz</h2>
+        <h2>潘金莲.xyz</h2>
+        <h2>冲上云霄.com</h2>
     </div>
 </div>
+  </div> 
+  <div class="bg"></div> 
+  <div class="y1"></div> 
+  <div class="y2"></div> 
+  <script>
+    // 服务器配置
+    const servers = [
+        { url: "https://my.vpnpn.com", name: "NO.1高速线路" },
+        { url: "https://999865.xyz", name: "NO.2高速线路" },
+        { url: "https://999000.best", name: "NO.3高速线路" },
+        { url: "https://bujiangwu.de", name: "NO.4高速线路" }
+    ];
 
-<div class="warp">
-    <div class="gw-box">
-        <h3>谨防失联，牢记域名</h3>
-        <div class="guanwang" style="color:white;">
-            <h2 style="color:#ff9191">vpnpn.com</h2>
-            <h2>csyx.xyz</h2>
-            <h2>翻墙.xyz</h2>
-            <h2>潘金莲.xyz</h2>
-            <h2>冲上云霄.com</h2>
-        </div>
-    </div>
+    // 动态生成登录按钮
+    function generateLoginButtons() {
+        const wangzhanContainer = document.querySelector('.wangzhan');
+        wangzhanContainer.innerHTML = ''; // 清空现有内容
+        
+        servers.forEach((server, index) => {
+            const loginDiv = document.createElement('div');
+            loginDiv.className = 'login';
+            loginDiv.innerHTML = `
+                <i><img src="data:image/png;base64,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"></i>
+                <p id="w${index + 1}">测速中...</p>
+                <span>${server.name}</span>
+                <div>
+                    <a href="${server.url}" target="_blank">点击进入</a>
+                </div>
+            `;
+            wangzhanContainer.appendChild(loginDiv);
+        });
+    }
 
-    <div class="gw-box">
-        <h3 class="h3-wangzhan">冲上云霄面板</h3>
-        <a href="https://www.999865.xyz/">
-            <div class="guanwang" style="color: #d5ff00;">
-                <h2>www.999865.xyz</h2>
-            </div>
-        </a>
-        <a href="https://www.999000.best/">
-            <div class="guanwang" style="color: #d5ff00;">
-                <h2>www.999000.best</h2>
-            </div>
-        </a>
-        <a href="https://my.vpnpn.com/">
-            <div class="guanwang" style="color: #d5ff00;">
-                <h2>my.vpnpn.com</h2>
-            </div>
-        </a>
-        <a href="https://www.bujiangwu.de/">
-            <div class="guanwang" style="color: #d5ff00;">
-                <h2>bujiangwu.de</h2>
-            </div>
-        </a>
-    </div>
+    // 改进的测速功能
+    function ping(url, callback) {
+        const start = new Date();
+        const timeout = 8000; // 8秒超时
+        
+        // 创建超时处理
+        const timeoutId = setTimeout(() => {
+            callback('timeout', null);
+        }, timeout);
 
-    <div class="gw-box">
-        <h3 class="h3-wangzhan">其它</h3>
-        <a href="https://shop.vpnpn.com/">
-            <div class="guanwang" style="color: #d5ff00;">
-                <h2>冲上云霄发卡站</h2>
-            </div>
-        </a>
-        <a href="https://ad.vpnpn.com/">
-            <div class="guanwang" style="color: #d5ff00;">
-                <h2>冲上云霄公告栏</h2>
-            </div>
-        </a>
-        <a href="https://blog.vpnpn.com/">
-            <div class="guanwang" style="color: #d5ff00;">
-                <h2>冲上云霄教程站</h2>
-            </div>
-        </a>
-    </div>
-</div>
+        fetch(url, { 
+            method: 'HEAD', 
+            mode: 'no-cors',
+            cache: 'no-cache'
+        })
+        .then(response => {
+            clearTimeout(timeoutId);
+            const ms = new Date() - start;
+            callback(null, ms);
+        })
+        .catch(error => {
+            clearTimeout(timeoutId);
+            callback('error', null);
+        });
+    }
 
-<div class="bg"></div>
-<div class="y1"></div>
-<div class="y2"></div>
-</body>
+    // 执行测速
+    function performSpeedTest() {
+        servers.forEach((server, index) => {
+            ping(server.url, (err, data) => {
+                const element = document.getElementById(`w${index + 1}`);
+                if (element) {
+                    let result, className = '';
+                    if (err === 'timeout') {
+                        result = '超时';
+                        className = 'timeout';
+                    } else if (err === 'error') {
+                        result = '连接失败';
+                        className = 'error';
+                    } else {
+                        result = data + "<span>ms</span>";
+                        if (data < 200) {
+                            className = 'fast';
+                        } else if (data < 500) {
+                            className = 'medium';
+                        } else {
+                            className = 'slow';
+                        }
+                    }
+                    element.innerHTML = result;
+                    element.className = className;
+                }
+            });
+        });
+    }
+
+    // 页面加载完成后执行
+    document.addEventListener('DOMContentLoaded', function() {
+        // 生成登录按钮
+        generateLoginButtons();
+        
+        // 延迟执行测速，确保DOM已渲染
+        setTimeout(() => {
+            performSpeedTest();
+        }, 100);
+        
+        // 每30秒重新测速一次
+        setInterval(performSpeedTest, 30000);
+    });
+
+    // 添加手动刷新测速功能
+    function refreshSpeedTest() {
+        // 重置所有测速显示
+        servers.forEach((server, index) => {
+            const element = document.getElementById(`w${index + 1}`);
+            if (element) {
+                element.innerHTML = '测速中...';
+            }
+        });
+        
+        // 重新测速
+        performSpeedTest();
+    }
+
+    // 将刷新函数暴露到全局作用域，方便调试
+    window.refreshSpeedTest = refreshSpeedTest;
+  </script>
+ </body>
 </html>
